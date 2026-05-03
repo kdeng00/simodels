@@ -16,4 +16,4 @@ josekit = { version = "0.10.3" }
 utoipa = { version = "5.4.0", features = ["uuid", "time"] }
 
 [dev-dependencies]
-tempfile = { version = "3.23.0" }
+tempfile = { version = "3.27.0" }
