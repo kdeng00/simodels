@@ -6,7 +6,7 @@ stages:
 
 build:
   stage: build
-  image: rust:1.85
+  image: rust:1.95
   script:
     - cargo build --release
     - ls -R target/release/
@@ -22,7 +22,7 @@ build:
 
 test:
   stage: test
-  image: rust:1.85
+  image: rust:1.95
   script:
     - cargo test
   cache:
@@ -33,7 +33,7 @@ test:
 
 test_variable:
     stage: test
-    image: rust:1.85
+    image: rust:1.95
     script:
         - echo "Checking CARGO_LOGIN_TOKEN..."
         - if [[ -z "$CARGO_LOGIN_TOKEN" ]]; then echo "CARGO_LOGIN_TOKEN is empty!"; exit 1; else echo "CARGO_LOGIN_TOKEN is set."; fi
@@ -56,28 +56,3 @@ extract_version:
   artifacts:
     reports:
       dotenv: version.env
-
-tag_release:
-  stage: deploy
-  image: registry.gitlab.com/gitlab-org/release-cli:latest
-  rules:
-    - if: '($CI_COMMIT_BRANCH == "dev" || $CI_COMMIT_BRANCH == "main") && $CI_PIPELINE_SOURCE == "push"'
-  dependencies:
-    - extract_version
-  script:
-    - release-cli create --name "Release $CI_COMMIT_BRANCH-v$VERSION" --tag-name "$CI_COMMIT_BRANCH-v$VERSION"
-
-deploy:
-  stage: deploy
-  image: rust:1.85
-  script:
-    - echo "Deployment will be configured when this is ready for use"
-    # - env
-    # Uncomment when you are ready for this to be published
-    # - cargo login "$CARGO_LOGIN_TOKEN"
-    # - cargo publish
-  dependencies:
-    - build
-  rules:
-    - if: '$CI_COMMIT_TAG'
-
