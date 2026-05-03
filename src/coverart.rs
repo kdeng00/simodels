@@ -1,6 +1,6 @@
 use std::io::Write;
 
-use rand::Rng;
+use rand::RngExt;
 
 const FILENAME_LENGTH: i32 = 16;
 
