@@ -10,7 +10,7 @@ license = "MIT"
 serde = { version = "1.0.228", features = ["derive"] }
 serde_json = { version = "1.0.150" }
 rand = { version = "0.10.2" }
-time = { version = "0.3.47", features = ["formatting", "macros", "parsing", "serde"] }
+time = { version = "0.3.53", features = ["formatting", "macros", "parsing", "serde"] }
 uuid = { version = "1.23.1", features = ["v4", "serde"] }
 josekit = { version = "0.10.3" }
 utoipa = { version = "5.4.0", features = ["uuid", "time"] }
