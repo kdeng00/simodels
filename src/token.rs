@@ -164,9 +164,9 @@ mod tests {
 
     fn test_resource() -> TokenResource {
         TokenResource {
-            issuer: String::from("icarus_auth_test"),
+            issuer: String::from("soaricarus_auth_test"),
             message: String::from("Authorization"),
-            audiences: vec![String::from("icarus_test")],
+            audiences: vec![String::from("soaricarus_test")],
             id: uuid::Uuid::nil(),
         }
     }

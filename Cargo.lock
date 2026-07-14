@@ -191,20 +191,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ed5909b6e89a2db4456e54cd5f673791d7eca6732202bbf2a9cc504fe2f9b84a"
 
 [[package]]
-name = "icarus_models"
-version = "0.11.3"
-dependencies = [
- "josekit",
- "rand",
- "serde",
- "serde_json",
- "tempfile",
- "time",
- "utoipa",
- "uuid",
-]
-
-[[package]]
 name = "indexmap"
 version = "2.14.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -489,6 +475,20 @@ name = "simd-adler32"
 version = "0.3.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "703d5c7ef118737c72f1af64ad2f6f8c5e1921f818cdcb97b8fe6fc69bf66214"
+
+[[package]]
+name = "simodels"
+version = "0.11.3"
+dependencies = [
+ "josekit",
+ "rand",
+ "serde",
+ "serde_json",
+ "tempfile",
+ "time",
+ "utoipa",
+ "uuid",
+]
 
 [[package]]
 name = "slab"

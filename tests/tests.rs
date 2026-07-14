@@ -33,8 +33,8 @@ mod song_tests {
     use tempfile::tempdir;
 
     use crate::utils;
-    use icarus_models::song;
-    use icarus_models::types;
+    use simodels::song;
+    use simodels::types;
 
     #[test]
     fn test_song_to_data() {
@@ -157,7 +157,7 @@ mod song_tests {
 #[cfg(test)]
 mod album_tests {
     use crate::utils;
-    use icarus_models::album;
+    use simodels::album;
 
     #[test]
     fn parse_album() {

@@ -1,4 +1,4 @@
-name: Rust Build
+name: simodels Build
 
 on:
   push:
