@@ -36,7 +36,7 @@ pub struct UserProfile {
     pub firstname: String,
     pub lastname: String,
     pub username: String,
-    pub email: String
+    pub email: String,
 }
 
 impl Default for User {
