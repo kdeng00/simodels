@@ -31,6 +31,14 @@ pub struct User {
     pub salt_id: uuid::Uuid,
 }
 
+#[derive(Clone, Debug, Deserialize, Serialize, utoipa::ToSchema)]
+pub struct UserProfile {
+    pub firstname: String,
+    pub lastname: String,
+    pub username: String,
+    pub email: String,
+}
+
 impl Default for User {
     fn default() -> Self {
         User {
