@@ -1,9 +1,9 @@
 [package]
 name = "simodels"
-version = "0.11.6"
+version = "0.11.7"
 edition = "2024"
 rust-version = "1.95"
-description = "models used for the soaricarus project"
+description = "Models used for the soaricarus project"
 license = "MIT"
 
 [dependencies]
