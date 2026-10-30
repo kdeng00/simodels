@@ -11,7 +11,7 @@ serde = { version = "1.0.229", features = ["derive"] }
 serde_json = { version = "1.0.154" }
 rand = { version = "0.10.3" }
 time = { version = "0.3.55", features = ["formatting", "macros", "parsing", "serde"] }
-uuid = { version = "1.27.0", features = ["v4", "serde"] }
+uuid = { version = "1.29.0", features = ["v4", "serde"] }
 josekit = { version = "0.10.3" }
 utoipa = { version = "6.0.0", features = ["uuid", "time"] }
 
