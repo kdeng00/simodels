@@ -3,7 +3,8 @@ pub struct SongEvent {
     pub song_id: uuid::Uuid,
     pub user_id: uuid::Uuid,
     pub event_type: String,
-    pub event_time: time::OffsetDateTime,
+    pub event_time: Option<time::OffsetDateTime>,
+    pub date_created: Option<time::OffsetDateTime>,
 }
 
 impl SongEvent {
