@@ -8,11 +8,10 @@ pub struct SongEvent {
 
 impl SongEvent {
     pub fn is_event_type_valid(&self) -> bool {
-        match self.event_type.as_str() {
-            SONG_EVENT_TYPE_PLAY => true,
-            SONG_EVENT_TYPE_PAUSE => true,
-            _ => false,
-        }
+        matches!(
+            self.event_type.as_str(),
+            SONG_EVENT_TYPE_PLAY | SONG_EVENT_TYPE_PAUSE
+        )
     }
 }
 
