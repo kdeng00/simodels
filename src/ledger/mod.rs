@@ -1,3 +1,4 @@
+#[derive(Debug, Default, serde::Deserialize, serde::Serialize, utoipa::ToSchema)]
 pub struct SongEvent {
     pub id: uuid::Uuid,
     pub song_id: uuid::Uuid,
