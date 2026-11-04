@@ -4,7 +4,9 @@ pub struct SongEvent {
     pub song_id: uuid::Uuid,
     pub user_id: uuid::Uuid,
     pub event_type: String,
+    #[serde(with = "time::serde::rfc3339::option")]
     pub event_time: Option<time::OffsetDateTime>,
+    #[serde(with = "time::serde::rfc3339::option")]
     pub date_created: Option<time::OffsetDateTime>,
 }
 
