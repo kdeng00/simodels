@@ -1,6 +1,6 @@
 [package]
 name = "simodels"
-version = "0.11.8"
+version = "0.11.9"
 edition = "2024"
 rust-version = "1.95"
 description = "Models used for the soaricarus project"
@@ -14,6 +14,22 @@ time = { version = "0.3.55", features = ["formatting", "macros", "parsing", "ser
 uuid = { version = "1.29.0", features = ["v4", "serde"] }
 josekit = { version = "0.10.3" }
 utoipa = { version = "6.0.0", features = ["uuid", "time"] }
+
+[features]
+default = ["full"]
+full = ["access_level", "album", "constants", "coverart", "ledger", "login_result", "song", "token", "types", "user", "util"]
+auth = ["constants", "login_result", "token", "user"]
+access_level = ["constants"]
+album = []
+constants = []
+coverart = ["constants", "types"]
+ledger = ["constants", "song", "types", "user"]
+login_result = ["constants", "token", "user"]
+song = ["constants", "types"]
+token = []
+types = []
+user = []
+util = []
 
 [dev-dependencies]
 tempfile = { version = "3.27.0" }

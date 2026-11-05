@@ -13,6 +13,22 @@ pub mod file_extensions {
     }
 }
 
+pub mod song_event {
+    /// Song Event Type - Play
+    pub const SONG_EVENT_TYPE_PLAY: &str = "PLAY";
+    /// Song Event Type - PAUSE
+    pub const SONG_EVENT_TYPE_PAUSE: &str = "PAUSE";
+}
+
+pub mod access_level {
+    pub const PUBLIC: &str = "PUBLIC";
+    pub const PRIVATE: &str = "PRIVATE";
+}
+
+pub mod token {
+    pub const TOKEN_TYPE: &str = "JWT";
+}
+
 pub mod error {
     pub const DIRECTORY_NOT_INITIALIZED: &str = "Directory has not been initialized";
     pub const FILENAME_NOT_INITIALIZED: &str = "Filename has not bee initialized";

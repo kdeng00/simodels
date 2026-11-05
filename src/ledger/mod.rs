@@ -1,0 +1,21 @@
+#[derive(Debug, Default, serde::Deserialize, serde::Serialize, utoipa::ToSchema)]
+pub struct SongEvent {
+    pub id: uuid::Uuid,
+    pub song_id: uuid::Uuid,
+    pub user_id: uuid::Uuid,
+    pub event_type: String,
+    #[serde(with = "time::serde::rfc3339::option")]
+    pub event_time: Option<time::OffsetDateTime>,
+    #[serde(with = "time::serde::rfc3339::option")]
+    pub date_created: Option<time::OffsetDateTime>,
+}
+
+impl SongEvent {
+    pub fn is_event_type_valid(&self) -> bool {
+        matches!(
+            self.event_type.as_str(),
+            super::constants::song_event::SONG_EVENT_TYPE_PLAY
+                | super::constants::song_event::SONG_EVENT_TYPE_PAUSE
+        )
+    }
+}
