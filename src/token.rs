@@ -111,15 +111,13 @@ pub struct TokenResource {
     pub id: uuid::Uuid,
 }
 
-const TOKEN_TYPE: &str = "JWT";
-
 pub fn create_token(
     key: &String,
     token_resource: &TokenResource,
     duration: time::Duration,
 ) -> Result<(String, i64), josekit::JoseError> {
     let mut header = josekit::jws::JwsHeader::new();
-    header.set_token_type(TOKEN_TYPE);
+    header.set_token_type(super::constants::token::TOKEN_TYPE);
 
     let mut payload = josekit::jwt::JwtPayload::new();
     let message = &token_resource.message;

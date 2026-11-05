@@ -25,6 +25,10 @@ pub mod access_level {
     pub const PRIVATE: &str = "PRIVATE";
 }
 
+pub mod token {
+    pub const TOKEN_TYPE: &str = "JWT";
+}
+
 pub mod error {
     pub const DIRECTORY_NOT_INITIALIZED: &str = "Directory has not been initialized";
     pub const FILENAME_NOT_INITIALIZED: &str = "Filename has not bee initialized";
