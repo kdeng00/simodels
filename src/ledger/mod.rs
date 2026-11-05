@@ -14,12 +14,8 @@ impl SongEvent {
     pub fn is_event_type_valid(&self) -> bool {
         matches!(
             self.event_type.as_str(),
-            SONG_EVENT_TYPE_PLAY | SONG_EVENT_TYPE_PAUSE
+            super::constants::song_event::SONG_EVENT_TYPE_PLAY
+                | super::constants::song_event::SONG_EVENT_TYPE_PAUSE
         )
     }
 }
-
-/// Song Event Type - Play
-pub const SONG_EVENT_TYPE_PLAY: &str = "PLAY";
-/// Song Event Type - PAUSE
-pub const SONG_EVENT_TYPE_PAUSE: &str = "PAUSE";

@@ -111,7 +111,7 @@ pub struct TokenResource {
     pub id: uuid::Uuid,
 }
 
-pub const TOKEN_TYPE: &str = "JWT";
+const TOKEN_TYPE: &str = "JWT";
 
 pub fn create_token(
     key: &String,
