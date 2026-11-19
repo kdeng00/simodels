@@ -9,7 +9,7 @@ license = "MIT"
 [dependencies]
 serde = { version = "1.0.229", features = ["derive"] }
 serde_json = { version = "1.0.154" }
-rand = { version = "0.10.3" }
+rand = { version = "0.10.4" }
 time = { version = "0.3.55", features = ["formatting", "macros", "parsing", "serde"] }
 uuid = { version = "1.29.3", features = ["v4", "serde"] }
 josekit = { version = "0.10.3" }
