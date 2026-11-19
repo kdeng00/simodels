@@ -4,6 +4,7 @@ pub mod constants;
 pub mod coverart;
 pub mod ledger;
 pub mod login_result;
+pub mod register_result;
 pub mod song;
 pub mod token;
 pub mod types;
