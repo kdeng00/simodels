@@ -4,5 +4,9 @@ use serde::{Deserialize, Serialize};
 pub struct RegisterResult {
     pub id: uuid::Uuid,
     pub username: String,
-    pub date_created: Option<time::OffsetDateTime>
+    pub email: String,
+    pub firstname: String,
+    pub lastname: String,
+    #[serde(with = "time::serde::rfc3339::option")]
+    pub date_created: Option<time::OffsetDateTime>,
 }
